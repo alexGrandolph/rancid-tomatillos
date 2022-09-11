@@ -3,7 +3,7 @@ import movieData from '../data/movieData.json';
 function MovieCard() {
   const renderMovieCards = (movies) => {
     return (
-      <div className="movies-container">
+      <div className="movies-list">
         {
           movies.map((movie, index) => {
             return (
