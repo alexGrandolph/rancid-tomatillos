@@ -3,22 +3,29 @@
   background-color: rgb(30, 29, 45);
   background-color: rgb(255, 255, 255);
 }
+html,
+body {
+  margin: 0px;
+  background-color: #6E6E73;
+  height: 100vh;
+  width: 100vw;
+}
 
+.movies {
+  padding: 30px;
+  margin: 30px;
+  display: flex;
+  /* flex-wrap: inhegarit; */
+}
 
 
 .movies-list {
-  /* display: flex;
-  flex-wrap: nowrap;
-  gap: 20px;
-  overflow-x: auto;
-  padding-left: 5%; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
   padding: 5%;
   align-content: center;
   justify-content: space-around;
-  /* flex-wrap: nowrap; */
 }
 
 .movie-image {
