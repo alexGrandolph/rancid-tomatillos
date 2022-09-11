@@ -1,13 +1,16 @@
 
 import './App.css';
 import MovieCard from './components/MovieCard.js'
+import Header from './components/Header.js'
 
 function App() {
   return (
-    <div className="movies">
-      
-      <MovieCard />
-    </div>
+    <>
+    <Header />
+      <div className="movies">  
+        <MovieCard />
+      </div>
+    </>
   );
 }
 

@@ -1,8 +1,8 @@
-* {
+/* * {
   box-sizing: border-box;
   background-color: rgb(30, 29, 45);
   background-color: rgb(255, 255, 255);
-}
+} */
 html,
 body {
   margin: 0px;
@@ -12,7 +12,7 @@ body {
 }
 
 .movies {
-  padding: 30px;
+  padding: 4px;
   margin: 30px;
   display: flex;
   /* flex-wrap: inhegarit; */
@@ -23,7 +23,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
-  padding: 5%;
+  /* padding: 5%; */
   align-content: center;
   justify-content: space-around;
 }
@@ -42,4 +42,22 @@ body {
   flex-direction: column;
   position: relative;
 
+}
+
+.header-container {
+  display: flex;
+  max-height:10%;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+}
+
+.header-logo {
+  height: 140px;
+  width: 150px;;
+}
+
+.header-text {
+  font-family: Combo;
+  font-size: 4em;
 }
