@@ -23,26 +23,6 @@ function MovieCard() {
       <div>{renderMovieCards(movieData.movies)}</div>
     </div>
   ) 
-  
-
 }
-  // const renderMovieCards = (movies) => {
-  //   movies.map((movie, index) => {
-  //     <div className="movies-container"
-  //       return (
-  //         <div className="movie-card-container"key={index}>
-  //           <img className="movie-poster" src={movie.poster_path} alt="movie-poster" />
-  //         </div>
-      
-  //   })
-  //   )
-  // }
-
-  // return (
-  //   <>
-  //     {renderMovieCards(movieData.movies)}
-  //   </>
-  
-  // )
 
 export default MovieCard;
