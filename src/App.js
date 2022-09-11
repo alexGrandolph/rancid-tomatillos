@@ -1,9 +1,13 @@
 
 import './App.css';
+import MovieCard from './components/MovieCard.js'
 
 function App() {
   return (
-    <h1>Test</h1>
+    <>
+      
+      <MovieCard />
+    </>
   );
 }
 
