@@ -14,17 +14,21 @@ function App() {
   }, [])
 
   const cards = allMovies.map(movie => {
+    
     return (
+      <div className="movie-container">
+
       <MovieCard
         key={movie.id}
         movie={movie}
       />
+   </div>
     )
   })
   return (
     <div className="app">
     <Header />
-      <div className="movies">  
+      <div className="movies-list">  
         {cards}
       </div>
     </div>
