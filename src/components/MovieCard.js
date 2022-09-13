@@ -1,6 +1,17 @@
-import movieData from '../data/movieData.json';
+// import movieData from '../data/movieData.json';
+import { useState, useEffect } from 'react'
 
 function MovieCard() {
+  const [allMovies, setAllMovies] = useState([])
+
+  useEffect(() => {
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies`)
+    .then(response => response.json())
+    .then(data => setAllMovies(data.movies))
+  })
+
+  console.log(allMovies)
+
   const renderMovieCards = (movies) => {
     return (
       <div className="movies-list">
@@ -20,7 +31,7 @@ function MovieCard() {
   }
   return (
     <div>
-      <div>{renderMovieCards(movieData.movies)}</div>
+      <div>{renderMovieCards(allMovies)}</div>
     </div>
   ) 
 }
