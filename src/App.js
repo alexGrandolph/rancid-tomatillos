@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react'
 
 function App() {
   const [allMovies, setAllMovies] = useState([])
+  const [currentMovie, setCurrentMovie] = useState("")
 
   useEffect(() => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies`)
@@ -17,11 +18,10 @@ function App() {
     
     return (
       <div className="movie-container">
-
-      <MovieCard
-        key={movie.id}
-        movie={movie}
-      />
+        <MovieCard
+          key={movie.id}
+          movie={movie}
+        />
    </div>
     )
   })
