@@ -2,8 +2,10 @@
 import './App.css';
 import MovieCard from './components/MovieCard.js'
 import Header from './components/Header.js'
-import { useState, useEffect } from 'react'
+import MovieShow from './components/MovieShow.js'
 
+import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   const [allMovies, setAllMovies] = useState([])
   const [currentMovie, setCurrentMovie] = useState("")
@@ -26,13 +28,23 @@ function App() {
     )
   })
   return (
-    <div className="app">
-    <Header />
-      <div className="movies-list">  
-        {cards}
-      </div>
-    </div>
+
+
+    <>
+    <Routes>
+        <Route exact path='/'  element={<Header /> } />
+        <Route path='/movies' element={cards} />
+        {/* <Header /> */}
+
+    </Routes>
+
+     
+    </>
   );
+
+
+
 }
+ 
 
 export default App;
