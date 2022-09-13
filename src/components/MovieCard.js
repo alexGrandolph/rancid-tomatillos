@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 
 function MovieCard(props) {
   return (
+
       <img className="movie-image" src={`${props.movie.poster_path}`} key="index" alt="movie-poster" />
+
   );
 }
 

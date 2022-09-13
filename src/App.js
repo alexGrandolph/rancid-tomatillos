@@ -19,12 +19,12 @@ function App() {
   const cards = allMovies.map(movie => {
     
     return (
-      <div className="movie-container">
+       <div className="movie-container">
         <MovieCard
           key={movie.id}
           movie={movie}
         />
-   </div>
+      </div>
     )
   })
   return (
@@ -32,8 +32,8 @@ function App() {
 
     <>
     <Routes>
-        <Route exact path='/'  element={<Header /> } />
-        <Route path='/movies' element={cards} />
+        <Route exact path='/'  element={[<Header />, cards] } />
+        <Route path='/movies' className="movies-list" element={cards} />
         {/* <Header /> */}
 
     </Routes>
