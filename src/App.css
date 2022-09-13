@@ -14,8 +14,8 @@ body {
 .movies {
   padding: 4px;
   margin: 30px;
-  display: flex;
-  /* flex-wrap: inhegarit; */
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 

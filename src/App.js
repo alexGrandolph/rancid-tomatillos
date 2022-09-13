@@ -11,7 +11,7 @@ function App() {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies`)
       .then(response => response.json())
       .then(data => setAllMovies(data.movies))
-  })
+  }, [])
 
   const cards = allMovies.map(movie => {
     return (
@@ -24,9 +24,9 @@ function App() {
   return (
     <div className="app">
     <Header />
-      <section className="movies">  
+      <div className="movies">  
         {cards}
-      </section>
+      </div>
     </div>
   );
 }
