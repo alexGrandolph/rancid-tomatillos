@@ -10,7 +10,7 @@ function MovieCard() {
     .then(data => setAllMovies(data.movies))
   })
 
-  console.log(allMovies)
+  // console.log(allMovies)
 
   const renderMovieCards = (movies) => {
     return (
