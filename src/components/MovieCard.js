@@ -19,7 +19,7 @@ function MovieCard() {
           movies.map((movie, index) => {
             return (
               <div className="movie-container">
-                <img className="movie-image" src={`${movie.poster_path}`} alt="movie-poster" />
+                <img className="movie-image" src={`${movie.poster_path}`} key="index" alt="movie-poster" />
                 
               </div>
             )
