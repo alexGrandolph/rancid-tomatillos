@@ -6,10 +6,15 @@ import Header from './components/Header.js'
 function App() {
   return (
     <>
+    <Routes>
+    
     <Header />
       <div className="movies">  
         <MovieCard />
+      
       </div>
+    </Routes>
+    
     </>
   );
 }
