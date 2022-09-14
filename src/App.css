@@ -98,6 +98,10 @@ body {
   box-shadow: 5px 5px 5px rgb(255, 255, 255);
 }
 
+.back-button {
+  position: absolute;
+}
+
 .movie-title {
   position: absolute;
   text-align: center;

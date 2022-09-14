@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
 
 
@@ -12,7 +12,7 @@ function MovieShow(props) {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
       .then(response => response.json())
       .then(data => setMovieInfo(data.movie))
-      console.log('effect ran')
+      // console.log('effect ran')
   }, [])
 
   const genres = movieInfo.genres?.join(' · ')
@@ -21,6 +21,9 @@ function MovieShow(props) {
   return (
     <div className="movie-component">
       <div className="backdrop-container">
+      <Link to='/'>
+      <button className="back-button">Back</button>
+      </Link>
         <img className="movie-backdrop" src={movieInfo.backdrop_path} alt="movie-backdrop" />
         <h1 className="movie-title">{movieInfo.title}</h1>
         <p className="movie-info-short">{`${genres} · ${movieYear}`}</p>
