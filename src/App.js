@@ -16,14 +16,17 @@ function App() {
       .then(data => setAllMovies(data.movies))
   }, [])
 
-
+  function changeBackground(e) {
+    e.target.style.width = '10%;';
+  }
 
   const cards = allMovies.map(movie => {
     
     return (
       <>
-       <div className="movie-container">
+        <div className="movie-container" onMouseOver={changeBackground}>
         <MovieCard
+         
           key={movie.id}
           movie={movie}
           id={movie.id}
