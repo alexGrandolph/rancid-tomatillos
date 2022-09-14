@@ -23,13 +23,18 @@ function MovieShow(props) {
       <div className="movie-text-container">
         <div className="movie-info-left">
           <h2>About <i>{movieInfo.title}</i></h2>
-          <p>Release Date{movieInfo.release_date}</p>
-          <p>{movieInfo.release_date}</p>
+          
+          <p>Release Date</p>
+          <p className="movie-data">{movieInfo.release_date}</p>
+          
           <p>Average Rating</p>
-          <p>{movieInfo.average_rating}</p>
+          <p className="movie-data">{movieInfo.average_rating}</p>
+
           <p>Genres</p>
-          <p>{genres}</p>
-          <p>{movieInfo.runtime} Minutes</p>
+          <p className="movie-data">{genres}</p>
+
+          <p>Runtime</p>
+          <p className="movie-data">{movieInfo.runtime} Minutes</p>
         </div>
           <img className="movie-poster-small" src={movieInfo.poster_path} alt="movie-poster-small" />
         <div className="movie-info-right">
