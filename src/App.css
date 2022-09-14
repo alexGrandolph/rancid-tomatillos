@@ -37,7 +37,6 @@ body {
 }
 
 
-
 .header-container {
   display: flex;
   max-height:10%;
@@ -47,6 +46,7 @@ body {
   font-size: 5em;
   color: red;
   font-family: Combo;
+  padding-bottom: 40px;
 }
 
 .animate__animated.animate__bounceInLeft {
