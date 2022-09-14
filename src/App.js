@@ -16,6 +16,8 @@ function App() {
       .then(data => setAllMovies(data.movies))
   }, [])
 
+
+
   const cards = allMovies.map(movie => {
     
     return (
@@ -24,6 +26,7 @@ function App() {
         <MovieCard
           key={movie.id}
           movie={movie}
+          id={movie.id}
         />
       </div>
       </>
@@ -36,7 +39,8 @@ function App() {
     <Routes>
         <Route exact path='/'  element={[<Header />, cards] } />
         <Route path='/movies' className="movies-list" element={cards} />
-        {/* <Header /> */}
+        <Route path='/:id' className="movie-show" element={<MovieShow id={'cheese'} />}  />
+
 
     </Routes>
 
