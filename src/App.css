@@ -90,8 +90,12 @@ body {
 } */
 }
 .movie-backdrop {
-  /* position: relative; */
   width: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: #6E6E73;
+  padding: 2px;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
 }
 
 .movie-title {
@@ -99,19 +103,26 @@ body {
   text-align: center;
   top: 1%;
   left: 45%;
-  font-size: 2.5em;
+  font-size: 2.9em;
   font-family: 'Kanit', sans-serif;
   font-style: italic;
+  font-weight: bold;
     
 }
 .movie-info-short {
   position: absolute;
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
   top: 90%;
   left: 40%;
-  font-size: 1em;
+  font-size: 1.2em;
   font-family: 'Kanit', sans-serif;
-  font-weight: bold;
+  font-weight: 900;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.601);
+  border-radius: 5px;
+
 }
 
 .movie-text-container {
@@ -129,6 +140,7 @@ body {
   border: 1px solid #ffffff;
   border-radius: 15px;
   background-color: #6E6E73;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
 }
 
 .movie-info-left {
@@ -139,6 +151,7 @@ body {
   padding-left: 30px;
   font-weight: 900;
   color: white;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
 
 }
 
@@ -152,5 +165,6 @@ body {
   width: 80%;
   padding-left: 30px;
   font-weight: bold;
-  color: white
+  color: white;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
 }
