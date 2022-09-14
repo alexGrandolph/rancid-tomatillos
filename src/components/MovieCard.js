@@ -1,11 +1,13 @@
 // import movieData from '../data/movieData.json';
 import { useState, useEffect } from 'react'
+import Header from './Header.js'
 
 function MovieCard(props) {
   return (
-
+    <>
+   
       <img className="movie-image" src={`${props.movie.poster_path}`} key="index" alt="movie-poster" />
-
+    </>
   );
 }
 
