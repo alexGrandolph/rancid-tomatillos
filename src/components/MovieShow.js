@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from 'react'
 
 
-function MovieShow(props) {
+function MovieShow() {
 
   const { id } = useParams()
 
@@ -18,6 +18,7 @@ function MovieShow(props) {
   const genres = movieInfo.genres?.join(' · ')
   const movieRating = movieInfo.average_rating?.toFixed(1)
   const movieYear = movieInfo.release_date?.split('-', 1) 
+  
   return (
     <div className="movie-component">
       <div className="backdrop-container">
