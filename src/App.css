@@ -67,3 +67,10 @@ body {
   font-family: Combo;
   font-size: 4em;
 }
+
+
+/* MovieShow Component */
+
+.movie-backdrop {
+  width: 100%;
+}

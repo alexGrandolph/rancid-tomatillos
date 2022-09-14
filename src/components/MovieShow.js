@@ -10,11 +10,23 @@ function MovieShow(props) {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
       .then(response => response.json())
       .then(data => setMovieInfo(data.movie))
+      console.log('effect ran')
   }, [])
-  console.log(movieInfo)
 
   return (
-    <h1>{movieInfo.title}</h1>
+    <div className="movie-component">
+      <h1>{movieInfo.title}</h1>
+      <img className="movie-backdrop" src={movieInfo.backdrop_path} alt="movie-backdrop" />
+      <h2>Info:</h2>
+      <ul>
+        <li>{movieInfo.release_date}</li>
+        <li>{movieInfo.average_rating}</li>
+        <li>{movieInfo.genres}</li>
+        <li>{movieInfo.runtime} Minutes</li>
+      </ul>
+      <h2>Summary</h2>
+      <p>{movieInfo.overview}</p>
+    </div>
   )
 }
 
