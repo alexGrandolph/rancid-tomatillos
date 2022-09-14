@@ -7,6 +7,7 @@ function MovieShow() {
   const { id } = useParams()
 
   const [movieInfo, setMovieInfo] = useState({})
+  const [movieTrailer, setMovieTrailer] = useState({})
 
   useEffect(() => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
@@ -14,6 +15,14 @@ function MovieShow() {
       .then(data => setMovieInfo(data.movie))
       // console.log('effect ran')
   }, [])
+
+  useEffect(() => {
+    fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
+    .then(response => response.json())
+    .then(data => setMovieTrailer(data.videos[1]))
+    // console.log(movieTrailer.key)
+  }, [])
+
 
   const genres = movieInfo.genres?.join(' · ')
   const movieRating = movieInfo.average_rating?.toFixed(1)
@@ -50,6 +59,15 @@ function MovieShow() {
           <h2>Summary</h2>
           <p>{movieInfo.overview}</p>
         </div>
+      </div>
+      <div className="movie-trailer-container">
+        <iframe
+          className='trailer'
+          title='watch-trailer'
+          width='854'
+          height='480'
+          src={`https://www.youtube.com/embed/${movieTrailer.key}?autoplay=1&mute=1`}>
+        </iframe>
       </div>
     </div>
   )
