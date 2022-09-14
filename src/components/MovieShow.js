@@ -13,14 +13,12 @@ function MovieShow() {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
       .then(response => response.json())
       .then(data => setMovieInfo(data.movie))
-      // console.log('effect ran')
   }, [])
 
   useEffect(() => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
     .then(response => response.json())
     .then(data => setMovieTrailer(data.videos[1]))
-    // console.log(movieTrailer.key)
   }, [])
 
 
