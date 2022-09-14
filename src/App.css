@@ -7,15 +7,14 @@ html,
 body {
   margin: 0px;
   background-color: #6E6E73;
+  background-color: #1e1e1e;
   height: 100vh;
   width: 100vw;
 }
 
-.movies {
+/* .movies {
   padding: 4px;
   margin: 30px;
-  display: flex;
-  /* flex-wrap: inhegarit; */
 }
 
 
@@ -23,7 +22,6 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1rem;
-  /* padding: 5%; */
   align-content: center;
   justify-content: space-around;
 }
@@ -33,16 +31,25 @@ body {
   border-radius: 10px;
   margin-bottom: 9px;
 }
-
+*/
 .movie-container {
-  width: 175px;
-  font-size: 12px;
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  display: inline-block;
+  height: 250px;
+  width: 200px;
+  padding: 10px;
+  justify-content: center;
+  align-content: center;
+  
 
+} 
+
+.movie-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 9px;
 }
+
+
 
 .header-container {
   display: flex;
@@ -60,4 +67,128 @@ body {
 .header-text {
   font-family: Combo;
   font-size: 4em;
+  color: white;
+}
+
+
+/* MovieShow Component */
+.backdrop-container {
+  position: relative;
+  text-align: center;
+  color:white;
+  letter-spacing: 1px;
+  /* text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+    font-size: 1.5em;
+} */
+}
+.movie-backdrop {
+  width: 100%;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: #6E6E73;
+  padding: 2px;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
+}
+
+.back-button {
+  position: absolute;
+  width: 8%;
+  height: 5%;
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #6E6E73;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-top: 15px;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  cursor: pointer;
+}
+
+.back-button:hover {
+    transform: translateY(3px);
+    background: rgba(255, 255, 255, 0.365);
+    color: black;
+}
+
+.movie-title {
+  position: absolute;
+  text-align: center;
+  top: 1%;
+  left: 45%;
+  font-size: 2.9em;
+  font-family: 'Kanit', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+    
+}
+.movie-info-short {
+  position: absolute;
+  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  top: 90%;
+  left: 40%;
+  font-size: 1.2em;
+  font-family: 'Kanit', sans-serif;
+  font-weight: 900;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.601);
+  border-radius: 5px;
+
+}
+
+.movie-text-container {
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  gap: 30px;
+  width: 90%;
+  justify-content: flex-end;
+  padding: 25px;
+}
+
+.movie-poster-small {
+  width: 30%;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: #6E6E73;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
+}
+
+.movie-info-left {
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: #6E6E73;
+  width: 80%;
+  padding-left: 30px;
+  font-weight: 900;
+  color: white;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
+
+}
+
+.movie-data {
+  font-weight: normal;
+}
+.movie-info-right {
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  background-color: #6E6E73;
+  width: 80%;
+  padding-left: 30px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
 }
