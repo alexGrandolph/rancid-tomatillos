@@ -98,16 +98,41 @@ body {
   text-align: center;
   top: 1%;
   left: 45%;
-  text-shadow:
-      2px 2px 0 #000,
-      -2px -2px 0 #000,
-      2px -2px 0 #000,
-      -2px 2px 0 #000,
-      0 2px 0 #000,
-      2px 0 0 #000,
-      0 -2px 0 #000,
-      -2px 0 0 #000,
-      2px 2px 5px #000;
-  font-size: 4.5em;
+  font-size: 2.5em;
+  font-family: 'Kanit', sans-serif;
+  font-style: italic;
     
+}
+.movie-info-short {
+  position: absolute;
+  text-align: center;
+  top: 90%;
+  left: 40%;
+  font-size: 1em;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+}
+
+.movie-text-container {
+  font-family: 'Kanit', sans-serif;
+  display: flex;
+  gap: 20px;
+}
+
+.movie-poster-small {
+  width: 20%;
+  border-radius: 5px;
+}
+
+.movie-info-left {
+  border: 1px solid #0000ff;
+  width: 100%;
+  padding-left: 30px;
+  font-weight: bold;
+}
+.movie-info-right {
+  border: 1px solid #0000ff;
+  width: 100%;
+  padding-left: 30px;
+  font-weight: bold;
 }

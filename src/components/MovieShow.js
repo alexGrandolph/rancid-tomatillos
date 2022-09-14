@@ -18,17 +18,25 @@ function MovieShow(props) {
       <div className="backdrop-container">
         <img className="movie-backdrop" src={movieInfo.backdrop_path} alt="movie-backdrop" />
         <h1 className="movie-title">{movieInfo.title}</h1>
-        <p>{`${genres} ${movieInfo.release_date}`}</p>
+        <p className="movie-info-short">{`${genres} ${movieInfo.release_date}`}</p>
       </div>
-      <h2>Info:</h2>
-      <ul>
-        <li>{movieInfo.release_date}</li>
-        <li>{movieInfo.average_rating}</li>
-        <p>{genres}</p>
-        <li>{movieInfo.runtime} Minutes</li>
-      </ul>
-      <h2>Summary</h2>
-      <p>{movieInfo.overview}</p>
+      <div className="movie-text-container">
+        <div className="movie-info-left">
+          <h2>About <i>{movieInfo.title}</i></h2>
+          <p>Release Date{movieInfo.release_date}</p>
+          <p>{movieInfo.release_date}</p>
+          <p>Average Rating</p>
+          <p>{movieInfo.average_rating}</p>
+          <p>Genres</p>
+          <p>{genres}</p>
+          <p>{movieInfo.runtime} Minutes</p>
+        </div>
+          <img className="movie-poster-small" src={movieInfo.poster_path} alt="movie-poster-small" />
+        <div className="movie-info-right">
+          <h2>Summary</h2>
+          <p>{movieInfo.overview}</p>
+        </div>
+      </div>
     </div>
   )
 }
