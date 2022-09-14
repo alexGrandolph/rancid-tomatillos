@@ -29,18 +29,19 @@ function Header() {
   useEffect(() => {
     setTimeout(() => {
       setLetterClass('text-animate-hover')
-    }, 4000)
+    }, 9000)
   }, [])
 
   return (
     <div className="header-container">
       <AnimatedLetters
+        className="header-text"
         letterClass={letterClass}
         strArray={titleArray}
         idx={2}
       />
       {/* <img className="header-logo" src={logo} alt="logo" /> */}
-      <span className="header-text">Rotten Tomatillos</span>
+      {/* <span className="header-text">Rotten Tomatillos</span> */}
     </div>
   )
 }

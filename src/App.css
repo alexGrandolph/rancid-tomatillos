@@ -57,6 +57,9 @@ body {
   justify-content: center;
   align-items: center;
   padding-top: 3%;
+  font-size: 5em;
+  color: red;
+  font-family: Combo;
 }
 
 .header-logo {
