@@ -70,7 +70,44 @@ body {
 
 
 /* MovieShow Component */
-
+.backdrop-container {
+  position: relative;
+  text-align: center;
+  color:white;
+  letter-spacing: 1px;
+  /* text-shadow:
+    2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    0 2px 0 #000,
+    2px 0 0 #000,
+    0 -2px 0 #000,
+    -2px 0 0 #000,
+    2px 2px 5px #000;
+    font-size: 1.5em;
+} */
+}
 .movie-backdrop {
+  /* position: relative; */
   width: 100%;
+}
+
+.movie-title {
+  position: absolute;
+  text-align: center;
+  top: 1%;
+  left: 45%;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
+  font-size: 4.5em;
+    
 }

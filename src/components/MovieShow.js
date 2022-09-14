@@ -12,16 +12,19 @@ function MovieShow(props) {
       .then(data => setMovieInfo(data.movie))
       console.log('effect ran')
   }, [])
-
+  const genres = movieInfo.genres?.join(' · ')
   return (
     <div className="movie-component">
-      <h1>{movieInfo.title}</h1>
-      <img className="movie-backdrop" src={movieInfo.backdrop_path} alt="movie-backdrop" />
+      <div className="backdrop-container">
+        <img className="movie-backdrop" src={movieInfo.backdrop_path} alt="movie-backdrop" />
+        <h1 className="movie-title">{movieInfo.title}</h1>
+        <p>{`${genres} ${movieInfo.release_date}`}</p>
+      </div>
       <h2>Info:</h2>
       <ul>
         <li>{movieInfo.release_date}</li>
         <li>{movieInfo.average_rating}</li>
-        <li>{movieInfo.genres}</li>
+        <p>{genres}</p>
         <li>{movieInfo.runtime} Minutes</li>
       </ul>
       <h2>Summary</h2>
