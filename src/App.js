@@ -3,6 +3,7 @@ import './App.css';
 import MovieCard from './components/MovieCard.js'
 import Header from './components/Header.js'
 import MovieShow from './components/MovieShow.js'
+import Dashboard from './components/Dashboard.js'
 
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -34,12 +35,12 @@ function App() {
   })
   return (
 
-
     <>
     <Routes>
         <Route exact path='/'  element={[<Header />, cards] } />
         <Route path='/movies' className="movies-list" element={cards} />
         <Route path='/:id' className="movie-show" element={<MovieShow id={'cheese'} />}  />
+        <Route path='/dashboard' className="movie-show" element={<Dashboard />}  />
 
 
     </Routes>
