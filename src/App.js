@@ -8,7 +8,6 @@ import Login from './components/Login.js'
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-
 function App() {
 
   const [allMovies, setAllMovies] = useState([])

@@ -1,5 +1,17 @@
 import { useState, useEffect } from 'react'
 
+async function loginUser(credentials) {
+  return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+  .then(data => data.json())
+}
+
+
 function Login() {
   const [currentUser, setCurrentUser] = useState({
     id: "",
@@ -9,13 +21,22 @@ function Login() {
   });
 
   function handleChange(event) {
-    console.log('test')
+    const { name, value } = event.target
+    setCurrentUser(prevCurrentUser => ({
+      ...prevCurrentUser,
+      [name]: value
+    }))
   }
 
   function handleSubmit(event) {
-    console.log(currentUser)
+   event.preventDefault()
+   if (currentUser.password === currentUser.passwordConfirm) {
+      console.log('api call')
+   } else {
+    console.log('error')
+   }
   }
-  
+
   return (
     <div className="login-container">
       <h1>Login Page</h1>
