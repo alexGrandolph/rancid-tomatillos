@@ -18,9 +18,17 @@ function MovieShow() {
   useEffect(() => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
     .then(response => response.json())
-    .then(data => setMovieTrailer(data.videos[1]))
+      // .then(data => console.log(data.videos))
+      .then(data => data.videos.find(video => {
+        if (video.type === 'Trailer') {
+          return setMovieTrailer(video)
+        } else {
+          return setMovieTrailer(data.videos[0])
+        }
+      }))
+    
   }, [])
-
+  console.log(movieTrailer.key)
 
   const genres = movieInfo.genres?.join(' · ')
   const movieRating = movieInfo.average_rating?.toFixed(1)
