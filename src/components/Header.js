@@ -1,6 +1,7 @@
 // import logo from '../assets/images/movie.png'
 import AnimatedLetters from './AnimatedLetters.js'
 import { useState, useEffect } from 'react'
+import { Link } from "react-router-dom";
 
 function Header() {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -34,6 +35,9 @@ function Header() {
 
   return (
     <div className="animate__animated animate__bounceInLeft">
+      <Link to='/dashboard'>
+        <button className="back-button">Dashboard</button>
+      </Link>
     <div className="header-container">
       <AnimatedLetters
         className="header-text"
@@ -41,6 +45,7 @@ function Header() {
         strArray={titleArray}
         idx={2}
       />
+     
       {/* <img className="header-logo" src={logo} alt="logo" /> */}
       {/* <span className="header-text">Rotten Tomatillos</span> */}
     </div>
