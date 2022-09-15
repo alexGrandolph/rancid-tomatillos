@@ -1,4 +1,5 @@
 import Login from './Login.js'
+import SignUp from './SignUp.js'
 import { useState } from 'react'
 
 function Dashboard() {
@@ -10,7 +11,12 @@ function Dashboard() {
   }
   
   if (!userId) {
-    return <Login setToken={setToken}/>
+    return (
+      <>
+      <Login setToken={setToken}/> 
+      <SignUp />
+      </>
+    )
   }
   return (
     <h1>Dashboard</h1>
