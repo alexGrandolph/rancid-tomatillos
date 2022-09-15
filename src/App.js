@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 function App() {
   const [allMovies, setAllMovies] = useState([])
-  const [currentMovie, setCurrentMovie] = useState("")
+  // const [currentMovie, setCurrentMovie] = useState("")
 
   useEffect(() => {
     fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies`)
@@ -16,15 +16,12 @@ function App() {
       .then(data => setAllMovies(data.movies))
   }, [])
 
-  function changeBackground(e) {
-    e.target.style.width = '10%;';
-  }
 
   const cards = allMovies.map(movie => {
     
     return (
       <>
-        <div className="movie-container" onMouseOver={changeBackground}>
+        <div className="movie-container">
         <MovieCard
          
           key={movie.id}
