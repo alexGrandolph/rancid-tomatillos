@@ -3,8 +3,8 @@ import { useState } from 'react'
 
 
 function Dashboard() {
-  const [ token, setToken] = useState('123')
-  
+  const [ token, setToken] = useState()
+
   if (!token) {
     return <Login/>
   }

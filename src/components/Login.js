@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 
 
 
@@ -11,23 +12,59 @@ async function loginUser(credentials) {
   })
     .then(data => data.json())
 }
-
 function Login() {
-  return (
-    <form>
-      <label>
-        <p>Username</p>
-        <input type="text" />
-      </label>
-      <label>
-        <p>Password</p>
-        <input type="password" />
-      </label>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-  )
-}
 
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [passwordConfirm, setPasswordConfirm] = useState();
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    if (password === passwordConfirm) {
+      console.log('api call')
+    } else {
+      console.log('error')
+    }
+  }
+  return (
+    <div className="login-container">
+      <h1>Login Page</h1>
+      <div className="form-container">
+        <form className="form">
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            className="form-input"
+            name="email"
+            onChange={e => setEmail(e.target.value)}
+            value={email}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="form-input"
+            name="password"
+            onChange={e => setPassword(e.target.value)}
+            value={password}
+          />
+          <input
+            type="passwordConfirm"
+            placeholder="Password Confirmation"
+            className="form-input"
+            name="passwordConfirm"
+            onChange={e => setPasswordConfirm(e.target.value)}
+            value={passwordConfirm}
+          />
+
+          <button
+            className="form-submit"
+            onSubmit={handleSubmit}
+          >Login</button>
+        </form>
+      </div>
+    </div>
+  )
+
+}
 export default Login
