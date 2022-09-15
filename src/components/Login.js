@@ -1,36 +1,31 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 
 
-async function loginUser(credentials) {
-  return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/login`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(credentials)
-  })
-    .then(data => data.json())
+async function loginUser(email, password, password_confirmation) {
+  return fetch(`http://localhost:3000/api/v1/users?email=${email}&password=${password}&password_confrimation${password_confirmation}`)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .then(data => console.log(data))
 }
-function Login() {
+function Login({ setToken }) {
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [passwordConfirm, setPasswordConfirm] = useState();
-
-  function handleSubmit(event) {
+  
+  async function handleSubmit(event) {
     event.preventDefault()
-    if (password === passwordConfirm) {
-      console.log('api call')
-    } else {
-      console.log('error')
-    }
+    const response = await loginUser(email, password, passwordConfirm);
+    console.log(response);
   }
+
   return (
     <div className="login-container">
       <h1>Login Page</h1>
       <div className="form-container">
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
 
           <input
             type="email"
@@ -49,7 +44,7 @@ function Login() {
             value={password}
           />
           <input
-            type="passwordConfirm"
+            type="password"
             placeholder="Password Confirmation"
             className="form-input"
             name="passwordConfirm"
@@ -59,7 +54,7 @@ function Login() {
 
           <button
             className="form-submit"
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
           >Login</button>
         </form>
       </div>
@@ -67,4 +62,8 @@ function Login() {
   )
 
 }
+Login.propTypes = {
+  setToken: PropTypes.func.isRequired
+}
+
 export default Login
