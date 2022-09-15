@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-
-
-async function loginUser(email, password, password_confirmation) {
-  return fetch(`http://localhost:3000/api/v1/users?email=${email}&password=${password}&password_confrimation${password_confirmation}`)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .then(data => console.log(data))
+function setStorage(id) {
+  localStorage.setItem('userId', id);
+  // setToken(id);
 }
+
 function Login({ setToken }) {
+  async function loginUser(email, password, password_confirmation) {
+    return fetch(`http://localhost:3000/api/v1/users?email=${email}&password=${password}&password_confrimation${password_confirmation}`)
+      .then(response => response.json())
+      .then(response => setToken(response.data.id))
+  }
 
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -17,10 +19,11 @@ function Login({ setToken }) {
   
   async function handleSubmit(event) {
     event.preventDefault()
-    const response = await loginUser(email, password, passwordConfirm);
-    console.log(response);
+    const result = await loginUser(email, password, passwordConfirm);
+    console.log(result)
   }
-
+  
+  
   return (
     <div className="login-container">
       <h1>Login Page</h1>
