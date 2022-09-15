@@ -8,7 +8,7 @@ function setStorage(id) {
 
 function Login({ setToken }) {
   async function loginUser(email, password, password_confirmation) {
-    return fetch(`http://localhost:3000/api/v1/users?email=${email}&password=${password}&password_confrimation${password_confirmation}`)
+    return fetch(`http://localhost:3000/api/v1/users-login?email=${email}&password=${password}&password_confrimation${password_confirmation}`)
       .then(response => response.json())
       .then(response => setToken(response.data.id))
   }

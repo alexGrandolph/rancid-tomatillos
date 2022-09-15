@@ -14,7 +14,7 @@ function Dashboard() {
     return (
       <>
       <Login setToken={setToken}/> 
-      <SignUp />
+      <SignUp setToken={setToken}/>
       </>
     )
   }
