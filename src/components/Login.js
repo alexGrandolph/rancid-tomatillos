@@ -1,4 +1,18 @@
-export default function Login() {
+
+
+
+async function loginUser(credentials) {
+  return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/login`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(credentials)
+  })
+    .then(data => data.json())
+}
+
+function Login() {
   return (
     <form>
       <label>
@@ -15,3 +29,5 @@ export default function Login() {
     </form>
   )
 }
+
+export default Login
