@@ -25,8 +25,8 @@ function Login({ setToken }) {
   
   
   return (
-    <div className="login-container">
-      <h1>Login Page</h1>
+    <div className="login-wraper">
+      <h1 className="login-header">Login Here</h1>
       <div className="form-container">
         <form className="form" onSubmit={handleSubmit}>
 

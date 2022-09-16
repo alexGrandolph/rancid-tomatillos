@@ -30,7 +30,7 @@ function SignUp( { setToken }) {
   return (
 
     <div className="login-container">
-      <h1>Sign Up Page</h1>
+      <h1  class="sign-up-header">Sign Up Here</h1>
       <div className="form-container">
         <form className="form" onSubmit={handleSubmit}>
 

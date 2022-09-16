@@ -193,3 +193,24 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+
+.dashboard-container {
+  padding-left: 30px;
+  color: white;
+  font-size: 2rem;
+}
+
+.login-header {
+  color: white;
+  padding-left: 50px;
+}
+.sign-up-header {
+  color: white;
+  padding-left: 50px;
+}
