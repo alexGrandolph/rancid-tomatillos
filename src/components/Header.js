@@ -1,4 +1,4 @@
-import logo from '../assets/images/logo4.png'
+import logo from '../assets/images/logo5.png'
 import AnimatedLetters from './AnimatedLetters.js'
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
@@ -24,7 +24,7 @@ function Header() {
     'o',
     's',
     ' ',
-    '🍅'
+    // '🍅'
   ]
 
   useEffect(() => {
@@ -39,6 +39,7 @@ function Header() {
         <button className="back-button">Dashboard</button>
       </Link>
     <div className="header-container">
+      <img className="header-logo" src={logo} alt="logo" />
       <AnimatedLetters
         className="header-text"
         letterClass={letterClass}
@@ -46,7 +47,6 @@ function Header() {
         idx={2}
       />
      
-      <img className="header-logo" src={logo} alt="logo" />
       {/* <span className="header-text">Rotten Tomatillos</span> */}
     </div>
     </div>

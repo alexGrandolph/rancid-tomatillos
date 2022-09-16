@@ -44,7 +44,8 @@ body {
   align-items: center;
   padding-top: 3%;
   font-size: 5em;
-  color: red;
+  color: #fd3b12;
+  
   font-family: Combo;
   padding-bottom: 40px;
 }
@@ -54,14 +55,15 @@ body {
 }
 
 .header-logo {
-  height: 140px;
-  width: 150px;;
+  width: 15%;
 }
+
 
 .header-text {
   font-family: Combo;
   font-size: 4em;
   color: white;
+  padding-left: 2px;
 }
 
 
