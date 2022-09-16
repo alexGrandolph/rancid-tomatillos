@@ -9,8 +9,20 @@ function Dashboard() {
     localStorage.setItem('userId', token);
     setUserId(token)
   }
+  // let validUser = false
+  console.log(localStorage.getItem('userId'))
   
-  if (!userId) {
+  function checkForUserId() {
+    if (localStorage.getItem('userId') === undefined && null) {
+      return false
+    } else {
+      return true 
+    }
+  }
+  
+  console.log(checkForUserId())
+
+  if (checkForUserId() === false) {
     return (
       <>
       <Login setToken={setToken}/> 

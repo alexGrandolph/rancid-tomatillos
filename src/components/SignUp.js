@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 function SignUp( { setToken }) {
+  
   async function signUpUser(email, password, password_confirmation) {
-    // console.log(JSON.stringify({ email, password, password_confirmation }))
+    
     return fetch(`http://localhost:3000/api/v1/users`, {
       method: 'POST',
       headers: {
@@ -12,9 +13,8 @@ function SignUp( { setToken }) {
       },
       body: JSON.stringify({email, password, password_confirmation})
     })
-      .then(response => response.json())
-      .then(response => setToken(response.data.id))
-      // .then(data => console.log(data))
+    .then(response => response.json())
+    .then(response => setToken(response.data.id))
   }
 
   const [email, setEmail] = useState();
@@ -24,7 +24,6 @@ function SignUp( { setToken }) {
   async function handleSubmit(event) {
     event.preventDefault()
     const result = await signUpUser(email, password, passwordConfirm);
-    // console.log(result)
   }
   
   
