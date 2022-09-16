@@ -1,4 +1,4 @@
-// import logo from '../assets/images/movie.png'
+import logo from '../assets/images/logo4.png'
 import AnimatedLetters from './AnimatedLetters.js'
 import { useState, useEffect } from 'react'
 import { Link } from "react-router-dom";
@@ -46,7 +46,7 @@ function Header() {
         idx={2}
       />
      
-      {/* <img className="header-logo" src={logo} alt="logo" /> */}
+      <img className="header-logo" src={logo} alt="logo" />
       {/* <span className="header-text">Rotten Tomatillos</span> */}
     </div>
     </div>
