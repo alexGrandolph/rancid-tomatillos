@@ -1,4 +1,5 @@
-// import logo from '../assets/images/movie.png'
+// import logo from '../assets/images/movie.p≈ng'
+import logo from '../assets/images/logo5.png'
 import AnimatedLetters from './AnimatedLetters.js'
 import { useState, useEffect } from 'react'
 
@@ -22,8 +23,8 @@ function Header() {
     'l',
     'o',
     's',
-    ' ',
-    '🍅'
+    // ' ',
+    // '🍅'
   ]
 
   useEffect(() => {
@@ -35,14 +36,14 @@ function Header() {
   return (
     <div className="animate__animated animate__bounceInLeft">
     <div className="header-container">
+      <img className="header-logo" src={logo} alt="logo" />
+
       <AnimatedLetters
         className="header-text"
         letterClass={letterClass}
         strArray={titleArray}
         idx={2}
       />
-      {/* <img className="header-logo" src={logo} alt="logo" /> */}
-      {/* <span className="header-text">Rotten Tomatillos</span> */}
     </div>
     </div>
   )
